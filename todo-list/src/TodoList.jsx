@@ -149,6 +149,8 @@ export default function TodoList() {
       <button onClick={doneAll}>Check All as Done</button>
       &nbsp;&nbsp;&nbsp;
       <button onClick={notDoneAll}>Uncheck All</button>
+      &nbsp;&nbsp;&nbsp;
+      <button onClick={notDoneAll}>Uncheck All</button>
     </div>
   );
 }
