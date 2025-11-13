@@ -7,7 +7,7 @@ function App() {
 
   return (
    <div>
-    <Lottery n={3} winSum={15}/>
+    <Lottery n={5} winSum={23}/>
    </div>
   )
 }

@@ -1,13 +1,37 @@
-export default function Form(){
-    return (
-        <form action="">
-            <input type="text" placeholder="Type something"/>
-            <button onClick={handleSubmit}>Submit</button>
-        </form>
-    )
-}
+import { useState } from "react";
 
-function handleSubmit(event){
-    console.log("Form was submitted!");
-    event.preventDefault();
+export default function Form() {
+  let [fullName, setFullName] = useState("");
+  let [lastName, setLastName] = useState("");
+
+  let handleChange = (event) => {
+    setFullName(event.target.value);
+  };
+
+   let handleLastNameC = (event) => {
+    setLastName(event.target.value);
+  };
+
+  return (
+    <form action="" className="formForUser">
+      <label htmlFor="firstname">First name : </label>
+      <input
+        type="text"
+        placeholder="Type your first name"
+        value={fullName}
+        onChange={handleChange}
+        id="firstname"
+      />
+      <br />
+      <label htmlFor="lastname">Last name : </label>
+      <input
+        type="text"
+        placeholder="Type your last name"
+        value={lastName}
+        onChange={handleLastNameC}
+        id="lastname"
+      />
+      <button>Search</button>
+    </form>
+  );
 }
